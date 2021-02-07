@@ -1,7 +1,7 @@
 // Declarations
-const API_URL = "http://api.openweathermap.org/data/2.5/weather?q=";
+const API_URL = "https://api.openweathermap.org/data/2.5/weather?q=";
 const API_KEY = "ab9c39c10a5f56de3182c22be7ffe35d";
-const IMAGE_URL = "http://openweathermap.org/img/w/";
+const IMAGE_URL = "https://openweathermap.org/img/w/";
 let inputCityEl = document.getElementById("city-name");
 let cityName;
 
