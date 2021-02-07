@@ -1,0 +1,144 @@
+/* Importing fonts from google fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap");
+/* resetting default properties  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  background-image: url("https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  overflow: hidden;
+  color: #fff;
+  transition: 0.5s ease-in;
+}
+/* overlay on body element to adjust contrast */
+body::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  );
+  z-index: -1;
+}
+.display {
+  text-align: center;
+}
+.form {
+  width: 340px;
+  background-color: #fff;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 3px;
+  margin: 10px 5px 100px 5px;
+}
+.btn {
+  color: #333;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  top: 2px;
+}
+.btn:focus {
+  outline: none;
+}
+.city-name {
+  width: 300px;
+  height: 40px;
+  padding: 10px 10px;
+  border-radius: 4px;
+  font-family: inherit;
+  border: none;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.city-name:focus {
+  outline: none;
+  background-color: #fff;
+}
+.btn {
+  margin-left: 0;
+}
+.city{
+  font-size: 1.5rem;
+  opacity: 0;
+}
+.temp {
+  font-size: 5rem;
+  opacity: 0;
+}
+
+.weather-icon {
+  height: 70px;
+  width: 70px;
+  text-align: center;
+  opacity: 0;
+}
+
+.climate,
+.humidity {
+  font-size: 1.2rem;
+  margin: 10px;
+  opacity: 0;
+}
+/* transition on change of city, temp , humidity */
+.city,
+.temp,
+.weather-icon,
+.climate,
+.humidity{
+  transition: 0.3s ease;
+}
+.city,
+.temp,
+.weather-icon,
+.climate,
+.humidity{
+  opacity: 1;
+}
+
+/* city not found request  */
+.bad-request{
+  font-size: 3rem;
+}
+
+/* media queries  */
+
+@media(max-height: 450px){
+  .form {
+    margin: 10px 10px 10px 10px;
+  }
+  .temp{
+    font-size: 2rem;
+  }
+
+}
+
+@media(max-width: 480px){
+  .form {
+    margin: 10px 10px 100px 10px;
+  }
+  .temp{
+    font-size: 2rem;
+  }
+}
